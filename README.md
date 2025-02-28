@@ -15,13 +15,11 @@ Um sistema para gerenciar produtos, com funcionalidades de cadastro, edição, e
 ## 📦 Como Executar o Projeto
 - Clone o repositório.
 - Instale as dependências com `npm install`.
-- Configure o `.env`.
 - Execute com `npm run dev`.
 
 ## 🧪 Como Testar o Projeto
 - Clone o repositório.
 - Instale as dependências com `npm install`.
-- Configure o `.env`.
 - Execute com `npm run test`.
 
 ---
