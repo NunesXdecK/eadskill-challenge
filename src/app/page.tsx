@@ -1,9 +1,7 @@
 import { Text } from "@/components/ui/text";
 import { Box } from "@/components/ui/box/box";
 import { Main } from "@/components/layout/main";
-import { Button } from "@/components/ui/button";
-import { ProductTableWithAlert as ProductTable } from "@/components/product/product-table";
-import { Modal } from "@/components/ui/modal";
+import { ProductTableWithAlert } from "@/components/product/product-table";
 import { FormModalButton } from "@/components/product/form-modal-button";
 
 export default function Home() {
@@ -16,7 +14,7 @@ export default function Home() {
         </Box>
         <FormModalButton>Novo</FormModalButton>
       </Box>
-      <ProductTable />
+      <ProductTableWithAlert />
     </Main>
   );
 }

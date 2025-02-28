@@ -1,4 +1,4 @@
-import { HttpService } from "@/core/domain/interfaces/http-service";
+import { HttpService } from "@/core/domain/interfaces/http-service.interface";
 import { ProductFilter } from "@/core/domain/interfaces/product-filter.interface";
 import { ProductRepository } from "@/core/domain/interfaces/product-repository.inteface";
 import { Product } from "@/core/domain/interfaces/product.interface";

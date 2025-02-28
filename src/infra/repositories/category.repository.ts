@@ -1,5 +1,5 @@
 import { AxiosResponse } from "axios";
-import { HttpService } from "@/core/domain/interfaces/http-service";
+import { HttpService } from "@/core/domain/interfaces/http-service.interface";
 import { CategoryRepository } from "@/core/domain/interfaces/category-repository.inteface";
 
 export class CategoryHttpRepository implements CategoryRepository {

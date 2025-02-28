@@ -24,7 +24,7 @@ export const Alert = ({ type, message }: Props) => {
     },
   };
   return (
-    <Box className={`z-20 min-w-[200px] fixed bottom-0 right-0 p-4 m-4 rounded-md ${className[type].className}`}>
+    <Box data-testid="alert-test" className={`z-20 min-w-[200px] fixed bottom-0 right-0 p-4 m-4 rounded-md ${className[type].className}`}>
       <Text.Default
         className={`text-lg font-medium ${className[type].classNameTitle}`}
       >

@@ -1,5 +1,5 @@
 "use client";
-import { withLeftModal } from "@/components/hoc/withLeftModal";
+import { withLeftModal } from "@/components/hoc/with-left-modal";
 import { Box } from "../box/box";
 import { Icons } from "../icons";
 import { Text } from "../text";

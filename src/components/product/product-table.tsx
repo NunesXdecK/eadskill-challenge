@@ -2,7 +2,7 @@
 import { ChangeEvent } from "react";
 import { Box } from "../ui/box/box";
 import { Input } from "../ui/input";
-import withAlert from "../hoc/withAlert";
+import { withAlert } from "../hoc/with-alert";
 import { Icons } from "@/components/ui/icons";
 import { Table } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,7 @@ interface Props {
   showAlert: AlertContextType["showAlert"];
 }
 
-const ProductTable = ({ showAlert }: Props) => {
+export const ProductTable = ({ showAlert }: Props) => {
   const {
     filter,
     loading,
@@ -33,7 +33,7 @@ const ProductTable = ({ showAlert }: Props) => {
   return (
     <>
       <Box>
-        <Input.Label>Categoria</Input.Label>
+        <Input.Label data-testid="category-select-label">Categoria</Input.Label>
         <Input.Select
           value={filter.category}
           onChange={(event: ChangeEvent<HTMLSelectElement>) =>
@@ -47,7 +47,7 @@ const ProductTable = ({ showAlert }: Props) => {
         </Input.Select>
       </Box>
       {loading ? (
-        <ProductTableSkeleton />
+        <ProductTableSkeleton data-testid="product-table-skeleton" />
       ) : (
         <>
           <Table.Wrapper>
@@ -81,6 +81,7 @@ const ProductTable = ({ showAlert }: Props) => {
                   <Table.TD>{product.description}</Table.TD>
                   <Table.TD className="flex gap-2 justify-end min-w-[140px]">
                     <Button.TrashConfirm
+                      data-testid={`delete-button-${product.id}`}
                       onConfirm={async (onClose) => {
                         const result =
                           await DeleteProductUseCaseFactory.create().execute(
@@ -106,6 +107,7 @@ const ProductTable = ({ showAlert }: Props) => {
             </Table.TBody>
           </Table.Wrapper>
           <Paginator
+            data-testid="paginator"
             page={filter.page}
             maxLength={maxLength}
             perPage={filter.perPage}

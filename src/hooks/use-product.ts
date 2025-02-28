@@ -61,6 +61,9 @@ export const useProduct = (id?: string): Result => {
       .then((result) => {
         setData(result);
         setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
       });
   }, []);
 

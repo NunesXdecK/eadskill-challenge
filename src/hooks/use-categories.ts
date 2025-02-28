@@ -16,6 +16,9 @@ export const useCategories = (): Result => {
       .then((result) => {
         setData(result);
         setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
       });
   }, []);
 

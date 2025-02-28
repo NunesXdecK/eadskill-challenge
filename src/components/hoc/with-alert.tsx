@@ -6,7 +6,7 @@ interface WithAlertProps {
   showAlert: AlertContextType["showAlert"];
 }
 
-const withAlert = <P extends object>(
+export const withAlert = <P extends object>(
   WrappedComponent: React.ComponentType<P & WithAlertProps>
 ) => {
   return (props: P) => {
@@ -14,5 +14,3 @@ const withAlert = <P extends object>(
     return <WrappedComponent {...props} showAlert={showAlert} />;
   };
 };
-
-export default withAlert;

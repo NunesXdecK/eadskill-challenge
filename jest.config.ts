@@ -8,14 +8,17 @@ const createJestConfig = nextJest({
 const config: Config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
-  collectCoverage: true,
   setupFilesAfterEnv: ["<rootDir>/test/setup-tests.ts"],
   coverageReporters: ["text"],
   collectCoverageFrom: [
     "src/**/*.{ts,tsx,js,jsx}", 
     "!src/contexts/*",
+    "!src/infra/factories/*",
+    "!src/core/factories/*",
+    "!src/core/domain/interfaces/*",
     "!src/app/layout.tsx",
     "!src/**/*.d.ts", 
+    "!src/**/types.ts", 
     "!src/**/*.factory.{ts,tsx,js,jsx}",
     "!src/**/*.interface.{ts,tsx,js,jsx}",
     "!src/**/*.test.{ts,tsx,js,jsx}",

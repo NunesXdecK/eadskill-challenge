@@ -65,10 +65,15 @@ export const useProducts = (): Result => {
 
   useEffect(() => {
     setLoading(true);
+    console.log("ENTROU")
     FindManyProductUseCaseFactory.create()
       .execute(filter)
       .then((result) => {
+        console.log("ENTROU")
         setData(result);
+        setLoading(false);
+      })
+      .catch(() => {
         setLoading(false);
       });
   }, [refresh, filter.category]);

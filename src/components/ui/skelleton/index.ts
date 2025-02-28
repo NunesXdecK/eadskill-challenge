@@ -1,5 +1,5 @@
 import { Input } from "./input";
-import { Text } from "./Text";
+import { Text } from "./text";
 
 export const Skelleton = {
   Text,
